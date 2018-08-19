@@ -19,7 +19,7 @@ let { width, height } = Dimensions.get('window')
 import HomePage from '../pages/Home'
 import Order from '../pages/Order'
 import Discover from '../pages/Discover'
-import My from '../pages/My'
+import Message from '../pages/Message'
 import Login from '../pages/Login'
 
 export default class TabView extends Component {
@@ -33,7 +33,7 @@ export default class TabView extends Component {
       ["主页", "ios-home-outline", "HomePage", <HomePage {...this.props} />],
       ["订单", "ios-cart-outline", "Discover", <Order {...this.props} />],
       ["搜索", "ios-search-outline", "Order", <Discover {...this.props} />],
-      ["消息", "ios-chatbubbles-outline", "My", <My {...this.props} />],
+      ["消息", "ios-chatbubbles-outline", "Message", <Message {...this.props} />],
       ["我", "ios-person-outline", "Login", <Login {...this.props} />]
     ]
     TabView.hideTabBar = TabView.hideTabBar.bind(this)

@@ -7,44 +7,50 @@
 import React, { Component } from 'react'
 import {
   Text,
+  TextInput,
   View,
   StyleSheet
 } from 'react-native'
 import NavBar from '../component/NavBar'
+import TabViewBar from '../component/TabViewBar'
+import ScrollableTabView from 'react-native-scrollable-tab-view'
+import OrderMyReleased from './OrderMyReleased'
+import OrderMyTaken from './OrderMyTaken'
 
 export default class Discover extends Component {
   constructor(props) {
     super(props)
   }
-  render() {
+  render(){
     return (
-      <View style={{ flex: 1, backgroundColor: "#f3f3f3" }}>
-        <NavBar title="搜索" />
-        <View style={[styles.flexContainer, { marginTop: 20, borderBottomColor: '#BDBEC0', borderBottomWidth: 1 }]}>
-          <View style={styles.formImage}>
-            <Text style={{ fontSize: 20, fontWeight: 'bold' }}>出发日期</Text>
+        <View style={{flex: 1, backgroundColor: "#f3f3f3"}}>
+          <NavBar title="搜索" />
+          <View style={[styles.flexContainer, { marginTop: 20, borderBottomColor: '#BDBEC0', borderBottomWidth: 1 }]}>
+            <View style={styles.formImage}>
+              <Text style={{ fontSize: 20, fontWeight: 'bold' }}>出发日期</Text>
+            </View>
+            <View style={styles.formInput}>
+              <TextInput style={styles.input} autoCorrect={false} />
+            </View>
           </View>
-          <View style={styles.formInput}>
-            <TextInput style={styles.input} autoCorrect={false} />
+          <View style={styles.flexContainer}>
+            <View style={styles.formImage}>
+              <Text style={{ fontSize: 20, fontWeight: 'bold' }}>出发地点</Text>
+            </View>
+            <View style={styles.formInput}>
+              <TextInput style={styles.input} autoCorrect={false} />
+            </View>
           </View>
+          <View style={styles.flexContainer}>
+            <View style={styles.formImage}>
+              <Text style={{ fontSize: 20, fontWeight: 'bold' }}>到达地点</Text>
+            </View>
+            <View style={styles.formInput}>
+              <TextInput style={styles.input} autoCorrect={false} />
+            </View>
+          </View>
+
         </View>
-        <View style={styles.flexContainer}>
-          <View style={styles.formImage}>
-            <Text style={{ fontSize: 20, fontWeight: 'bold' }}>出发地点</Text>
-          </View>
-          <View style={styles.formInput}>
-            <TextInput style={styles.input} autoCorrect={false} />
-          </View>
-        </View>
-        <View style={styles.flexContainer}>
-          <View style={styles.formImage}>
-            <Text style={{ fontSize: 20, fontWeight: 'bold' }}>到达地点</Text>
-          </View>
-          <View style={styles.formInput}>
-            <TextInput style={styles.input} autoCorrect={false} />
-          </View>
-        </View>
-      </View>
     )
   }
 }

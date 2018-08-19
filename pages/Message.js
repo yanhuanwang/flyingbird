@@ -33,11 +33,11 @@ export default class My extends Component {
         <NavBar
           title="我的信息"
           leftIcon="ios-notifications-outline"
-          leftPress={this.leftPress.bind(this)}
+          // leftPress={this.leftPress.bind(this)}
           rightIcon="ios-settings-outline"
-          rightPress={this.rightPress.bind(this)}
+          // rightPress={this.rightPress.bind(this)}
         />
-        
+
       </View>
     )
   }

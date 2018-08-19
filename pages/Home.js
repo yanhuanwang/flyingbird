@@ -39,7 +39,7 @@ export default class HomePage extends Component {
     // do stuff while splash screen is shown
     // After having done stuff (such as async tasks) hide the splash screen
     setTimeout(() => {
-      SplashScreen.hide();
+      //SplashScreen.hide();
     }, 1000);
   }
   render() {
